@@ -37,17 +37,21 @@
     function printresult($data){
   ?>
 
-<div class="result-div">
-    <div class="result-content">
-        <div class="text-center">
-            <h3 style="color: #DBD1B7;"> <b>RESULT</b> </h3>
-            <hr style="width:50%; border-top: 2px dotted  #DBD1B7;">
-            <p style="font-size: 15px; color: #000000;"><?php echo $data; ?></p>
-            <div class="continue-button">
-                <button id="success-button" type="button"  class="btn btn-primary btn-lg">Continue</button>
-            </div>
-        </div>
-    </div>
-</div>
+ <div class="image-challenge">
 
+ </div>
+ <div class="challenge-content-div">
+     <div class="result-div">
+         <div class="result-content">
+             <div class="text-center">
+                 <h3 style="color: #DBD1B7;"> <b>RESULT</b> </h3>
+                 <hr style="width:50%; border-top: 2px dotted  #DBD1B7;">
+                 <p style="font-size: 15px; color: #000000;"><?php echo $data; ?></p>
+                 <div class="continue-button">
+                     <button id="success-button" type="button"  class="btn btn-primary btn-lg">Continue</button>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
 <?php } ?>

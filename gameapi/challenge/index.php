@@ -41,20 +41,25 @@
     function printchallenge($data){
 ?>
 
-    <h3 style="color: #DBD1B7;"><?php echo $data["title"]; ?></h3>
-    <hr style="width:50%; border-top: 2px dotted  #DBD1B7;">
-    <p style="font-size: 15px; color: #DBD1B7;"><?php echo $data['description']; ?></p>
-    <h4 style="color: #DBD1B7;">WHAT DO YOU WANT TO DO?</h4>
+    <div class="image-challenge">
+        <img src="<?php echo $data["imgsrc"]; ?>" height="200px" width="200px;" alt="">
+    </div>
+    <div class="challenge-content-div">
+        <h3 style="color: #DBD1B7;"><?php echo $data["title"]; ?></h3>
+        <hr style="width:50%; border-top: 2px dotted  #DBD1B7;">
+        <p style="font-size: 15px; color: #DBD1B7;"><?php echo $data['description']; ?></p>
 
-    <div class="option">
-        <?php
-            $no_option = $data["option_no"];
-            for ($i = 1; $i <= $no_option; $i++){
-         ?>
-         <div class="option1">
-            <h3 id="<?php echo "option" ?>" ><?php echo $data["option".$i]; ?></h3>
+        <h4 style="color: #DBD1B7;">WHAT DO YOU WANT TO DO?</h4>
+        <div class="option">
+            <?php
+                $no_option = $data["option_no"];
+                for ($i = 1; $i <= $no_option; $i++){
+             ?>
+             <div class="option1">
+                <h3 id="<?php echo "option" ?>" ><?php echo $data["option".$i]; ?></h3>
+            </div>
+            <?php } ?>
         </div>
-        <?php } ?>
     </div>
 <?php
     }
