@@ -13,6 +13,15 @@
     padding-top: 10px;
 }
 
+.nav-item span{
+    color: #DBD1B7;
+    font-size: 15px;
+}
+
+.nav-item{
+    height: 23px;
+}
+
 .right-bar{
     width: 75px;
     float: right;

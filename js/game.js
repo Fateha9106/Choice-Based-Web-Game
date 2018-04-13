@@ -79,7 +79,7 @@ let nextoperation = () => {
         if (nextchallenge == '35'){
             gameover();
         }
-        else if (currentbalance <= 0){
+        else if (Number(currentbalance) <= 0){
             gameover();
         }
         else if (nextchallenge == '36'){
@@ -145,7 +145,17 @@ let updateview = (data) => {
 }
 
 let gameover = () => {
+    console.log('game over');
+}
 
+
+
+let createSideBar = () =>{
+    let sidebar = $('#sidebarDates');
+    for (let i = 1; i <= 30; i++){
+        sidebar.append($('<span>-</span>').attr('id', 'dayNumberSide'+i));
+    }
 }
 
 console.log("loaded gun..\n");
+window.onLoad = createSideBar();
