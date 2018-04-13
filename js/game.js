@@ -26,6 +26,7 @@ let getnextchallenge = () => {
             currentchallenge = data;
             console.log(typeof data);
             console.log(data);
+            updateSideBar(currentchallenge.day);
         }
     });
     $.ajax({
@@ -75,6 +76,7 @@ let nextoperation = () => {
     }
     else{
         updatebalance();
+        offSideBar(currentchallenge.day);
         nextchallenge = currentchallenge['next'+currentchoice];
         if (nextchallenge == '35'){
             gameover();
@@ -145,16 +147,24 @@ let updateview = (data) => {
 }
 
 let gameover = () => {
-    console.log('game over');
+    window.open("game_over.php?day="+currentchallenge.day,"_self")
 }
-
-
 
 let createSideBar = () =>{
     let sidebar = $('#sidebarDates');
     for (let i = 1; i <= 30; i++){
         sidebar.append($('<span>-</span>').attr('id', 'dayNumberSide'+i));
     }
+}
+
+let offSideBar = (id) => {
+    let completeId = "#dayNumberSide"+id;
+    $(completeId).html("-");
+}
+
+let updateSideBar = (id) => {
+    let completeId = "#dayNumberSide"+id;
+    $(completeId).html("Day " + id);
 }
 
 console.log("loaded gun..\n");

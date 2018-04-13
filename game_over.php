@@ -20,15 +20,17 @@
 <body style="background-color: #151A1E; color: #D4784C;font-family: 'Hind Siliguri', sans-serif Semibold;">
     <div class="container">
         <div style="padding-top: 10%;  padding-left:30%; padding-right :30%; color: #DBD1B7;">
-            
+
             <div class="text-center">
                 <h1 style="color: #CE4415; font-size:150px"> <b>!</b> </h1>
                 <h1 style="color: #CE4415">
                     <b>OPPSSS!!!</b>
                 </h1>
-                <h1 style="color: #CE4415">You Ran Out of Money</h1>
+                <h1 style="color: #CE4415">You Ran Out of Money
+                    <?php if (isset($_GET["day"])){ echo " at day: ".$_GET["day"];} ?>
+                </h1>
                 <br>
-                
+
                 <h4 style="color:#DBD1B7">Many people loses to poverty such way. Please donate.</h4>
             </div>
 
@@ -36,7 +38,7 @@
         </div>
     </div>
 
-    
+
 </body>
 
 </html>
