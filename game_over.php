@@ -31,7 +31,7 @@
                 </h1>
                 <br>
 
-                <h4 style="color:#DBD1B7">Many people loses to poverty such way. Please donate.</h4>
+                <h4 style="color:#DBD1B7">Many people loses to poverty such way. Please consider a <a href="donate.html">donation</a>                </h4>
             </div>
 
 
